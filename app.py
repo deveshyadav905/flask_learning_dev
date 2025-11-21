@@ -18,7 +18,7 @@ def contact():
 def aboute():
 	return  "Hello, I'm Python Developer, Experties in Web Scraping!"
 
-@app.route("/hello")
+@app.route("/hello/<name>")
 def hello():
 	name = request.args.get('name','Guest')
 	return jsonify(status = "oK",message = f"Hello {name.title()} Welcome to Flask Development!")
